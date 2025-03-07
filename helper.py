@@ -1,10 +1,10 @@
 import os
 import shutil
 
-f_orign = r"C:\Users\34619\Desktop\TEST"
-f_d = r"C:\Users\34619\Desktop\test2"
-f_d_2 = r"C:\Users\34619\Desktop\test3"
-list = [f_orign, f_d, f_d_2]
+f_orign = r"E:\stuff2"
+f_d = r"C:\Users\34619\Pictures\Saved Pictures\TEST"
+
+list = [f_orign, f_d]
 
 
 def check_folder(f_info):
@@ -32,7 +32,7 @@ def next_name(extension):
 
 def move_rename():
     """Check if there is an image, move and rename it automatically """
-    for extension in [".jpg", ".png"]:
+    for extension in [".jpg", ".png", ".webp"]:
         ruta_q = os.path.join(f_orign, f"q{extension}")
         if os.path.exists(ruta_q):
             nueva_ruta, nuevo_nombre = next_name(extension)
