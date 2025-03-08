@@ -1,17 +1,23 @@
 import time
 import sys
-from helper import *
+import helper as h
 
 
-print("Programa programeando ....... Presiona Ctrl+C to stopit.")
+def m_code():
+    print("Programa programeando2 .......")
 
-try:
-    folders_creator()
+    try:
+        h.folders_creator()
 
-    while True:
-        move_rename()
-        time.sleep(2)
+        while True:
+            h.move_rename()
+            time.sleep(2)
 
-except KeyboardInterrupt:
-    print("\nStopeado correctamente. =) ")
-    sys.exit(0)
+    except KeyboardInterrupt:
+        print("\nStopeado correctamente. =) ")
+        sys.exit(0)
+
+
+if __name__ == '__main__':
+    print("cacatua")
+    m_code()
