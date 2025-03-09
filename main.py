@@ -3,9 +3,7 @@ import sys
 import helper as h
 
 
-def m_code():
-    print("Programa programeando2 .......")
-
+def m_code() -> None:
     try:
         h.folders_creator()
 
@@ -19,5 +17,5 @@ def m_code():
 
 
 if __name__ == '__main__':
-    print("cacatua")
+    print("Starting Main")
     m_code()
