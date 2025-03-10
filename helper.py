@@ -12,7 +12,7 @@ def check_folder(f_info: str) -> None:
 
 
 def folders_creator() -> None:
-    for folders in cf.list:
+    for folders in cf.new_list:
         check_folder(folders)
 
 
