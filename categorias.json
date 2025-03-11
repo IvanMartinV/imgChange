@@ -1,0 +1,43 @@
+{
+    "categorias": {
+        "ass": "Hot",
+        "a": "Armas",
+        "ar": "Armaduras",
+        "an": "Animales",
+        "ang": "Angeles",
+        "al": "Alas",
+        "c": "Construccion",
+        "ca": "Cara",
+        "d": "Dragon",
+        "de": "Demon",
+        "dr": "Drop_Items",
+        "e": "Efectos",
+        "eq": "Equipo_tactico",
+        "f": "Fotos",
+        "gui": "Interfaz",
+        "g": "Grifos",
+        "h": "Huesos",
+        "ia": "IA",
+        "l": "Logo",
+        "li": "Libros",
+        "m": "Maid",
+        "ma": "Magia",
+        "me": "Mecanicas",
+        "mo": "Monstruos",
+        "p": "Plantas",
+        "pa": "Paletas",
+        "pp": "Paisaje",
+        "pl": "Plants",
+        "r": "Runas",
+        "ro": "Ropa",
+        "rol": "Rol",
+        "s": "Simbolos",
+        "t": "Test",
+        "te": "Terreno",
+        "txt": "Texto",
+        "el": "_ELSE"
+    },
+    "paths": {
+        "f_origin": "C:\\Users\\34619\\Pictures\\newImagenesGuardadas"
+    }
+}
