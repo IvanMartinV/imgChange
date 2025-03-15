@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Imágenes</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Gestión de Imágenes</h1>
+
+    {% if message %}
+    <p style="color: green;">{{ message }}</p>
+    {% endif %}
+
+
+    <form hx-post="/add_destination" hx-swap="outerHTML">
+        <label for="name">Nombre del destino:</label>
+        <input type="text" name="name" required>
+        <label for="path">Ruta de destino:</label>
+        <input type="text" name="path" required>
+        <button type="submit">Añadir Destino</button>
+    </form>
+
+    <h2>Destinos</h2>
+    <ul>
+        {% for name, path in destinations.items() %}
+            <li>{{ name }} - {{ path }}</li>
+        {% endfor %}
+    </ul>
+
+    <form hx-post="/move_image" hx-swap="outerHTML">
+        <label for="filename">Nombre del archivo:</label>
+        <input type="text" name="filename" required>
+        <label for="destination">Destino:</label>
+        <select name="destination">
+            {% for name in destinations.keys() %}
+                <option value="{{ name }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Mover Imagen</button>
+    </form>
+</body>
+</html>
