@@ -1,11 +1,11 @@
 {
     "categorias": {
-        "ass": "Hot",
         "a": "Armas",
         "ar": "Armaduras",
         "an": "Animales",
         "ang": "Angeles",
         "al": "Alas",
+        "ass": "Hot",
         "c": "Construccion",
         "ca": "Cara",
         "d": "Dragon",
@@ -14,7 +14,6 @@
         "e": "Efectos",
         "elf": "Elfos",
         "eq": "Equipo_tactico",
-        "f": "Fotos",
         "gui": "Interfaz",
         "g": "Grifos",
         "h": "Huesos",
@@ -39,7 +38,9 @@
         "t": "Test",
         "te": "Terreno",
         "txt": "Texto",
-        "el": "_ELSE"
+        "el": "_ELSE",
+        "pla": "Planos",
+        "pj": "Personaje"
     },
     "paths": {
         "f_origin": "C:\\Users\\34619\\Pictures\\newImagenesGuardadas"

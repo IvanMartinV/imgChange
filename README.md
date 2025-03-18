@@ -5,21 +5,16 @@ Pequeño proyecto para mover y renombrar img.
 especificar:
 
 1
-- Donde se guardan las imagenes "inicialmente"
-  - Ubicación inicial.
+- Especificar donde se guardan las imagenes "inicialmente", 
+  (en mi caso en: C:\Users\34619\Pictures\newImagenesGuardadas)
 
-2 Especificar:
-- Botton para añadir "nuevo lugar de destino".
-- "lugar de destino" (ubicación automatica donde 
-se guardará la imagen al final).
-- Con que nombre guardar la imagen. / formato ej "logo-1.jpg"
-- Especificar la extension??? / o no.
-- Especificar el nombre con un "atajo-rapido". 
-la imagen se guardará en la ubicación si inicialmente
-se guarda con el nombre especificado en esta casilla
-: ej "l.jpg"
+2
+- Que si se cumplen las especificaciones (es decir, si en categorias.json hay por ejemplo algo como "an": "Animales", y se guarda una imagen como an) mover automaticamente imagenes y renombrarlas en la ubicaciones Animales.
+(C:\Users\34619\Pictures\newImagenesGuardadas\Animales), con el formato ej "1-Animales.{extension}"
 
-l.jpg --> logo-1.jpg
+3
+- Poder añadir a traves de la interfaz, un nuevo enlace, es decir si la imagen nueva se llame f, se guarde en la carpeta Flautas.
+
 
 # A
 ass -> Hot\

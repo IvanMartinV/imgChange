@@ -5,41 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Imágenes</title>
     <script src="https://unpkg.com/htmx.org@1.9.2"></script>
-    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Gestión de Imágenes</h1>
+    <h1>📂 Gestión de Imágenes</h1>
 
     {% if message %}
-    <p style="color: green;">{{ message }}</p>
+        <p style="color: green;">{{ message }}</p>
     {% endif %}
 
-
-    <form hx-post="/add_destination" hx-swap="outerHTML">
-        <label for="name">Nombre del destino:</label>
-        <input type="text" name="name" required>
-        <label for="path">Ruta de destino:</label>
-        <input type="text" name="path" required>
-        <button type="submit">Añadir Destino</button>
+    <h2>➕ Añadir Categoría</h2>
+    <form hx-post="/add_category" hx-target="#message">
+        <label>Atajo (ej: 'f'):</label>
+        <input type="text" name="shortcut" required>
+        <label>Carpeta destino (ej: 'Flautas'):</label>
+        <input type="text" name="folder_name" required>
+        <button type="submit">Añadir</button>
     </form>
 
-    <h2>Destinos</h2>
+    <h2>📂 Categorías Actuales</h2>
     <ul>
-        {% for name, path in destinations.items() %}
-            <li>{{ name }} - {{ path }}</li>
+        {% for key, value in categories.items() %}
+            <li><strong>{{ key }}</strong> → {{ value }}</li>
         {% endfor %}
     </ul>
 
-    <form hx-post="/move_image" hx-swap="outerHTML">
-        <label for="filename">Nombre del archivo:</label>
-        <input type="text" name="filename" required>
-        <label for="destination">Destino:</label>
-        <select name="destination">
-            {% for name in destinations.keys() %}
-                <option value="{{ name }}">{{ name }}</option>
-            {% endfor %}
-        </select>
-        <button type="submit">Mover Imagen</button>
-    </form>
+    <div id="message"></div>
 </body>
 </html>

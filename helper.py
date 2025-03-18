@@ -17,13 +17,13 @@ def folders_creator() -> None:
 
 
 def next_name(folder_path: str, base_name: str, extension: str) -> Tuple[str, str]:
-    """Encuentra el siguiente número disponible para una imagen."""
-    index = 0
+    """Genera un nombre de archivo único basado en el número disponible"""
+    index = 1
     while True:
-        nuevo_nombre = f"{index}-{base_name}{extension}"
-        ruta_nueva = os.path.join(folder_path, nuevo_nombre)
-        if not os.path.exists(ruta_nueva):
-            return ruta_nueva, nuevo_nombre
+        new_filename = f"{index}-{base_name}{extension}"
+        new_path = os.path.join(folder_path, new_filename)
+        if not os.path.exists(new_path):
+            return new_filename, new_path
         index += 1
 
 
